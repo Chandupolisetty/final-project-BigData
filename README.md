@@ -8,7 +8,7 @@ Commands and a notebook about processing text data using Spark and Python.
 
 ## Resource for Text Data:
 
-- [The Project Gutenberg eBook of The Wonders of Optics, by Fulgence Marion](https://www.gutenberg.org/files/65114/65114-0.txt)
+- [https://www.gutenberg.org/files/65114/65114-0.txt](https://www.gutenberg.org/files/65114/65114-0.txt)
 
 ## Tools and Languages:
 - Databricks Cloud Environment.
@@ -59,18 +59,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from collections import Counter
-
-source = 'The Project Gutenberg eBook of The Iliad, by Homer'
+ 
+source = 'The Project Gutenberg eBook of The Wonders of Optics, by Fulgence Marion'
 title = 'Top Words in ' + source
 xlabel = 'Count'
 ylabel = 'Words'
-
+ 
 # create Pandas dataframe from list of tuples
-df = pd.DataFrame.from_records(final_results, columns =[xlabel, ylabel]) 
+df = pd.DataFrame.from_records(results, columns =[xlabel, ylabel]) 
 print(df)
-
+ 
 # create plot (using matplotlib)
-plt.figure(figsize=(15,15))
+plt.figure(figsize=(10,3))
 sns.barplot(xlabel, ylabel, data=df, palette="Paired").set_title(title)
 ```
 
